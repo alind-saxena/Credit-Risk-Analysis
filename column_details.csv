@@ -1,0 +1,153 @@
+,,,,,,
+,Accepted_Cols_desc,,Name,Type,Nullable,Description
+1,id,,AsOfDate,String,No,As of date
+2,member_id,,id,Integer,No,A unique LC assigned ID for the loan listing.
+3,loan_amnt,,memberId,Integer,No,A unique LC assigned Id for the borrower member.
+4,funded_amnt,,term,Integer,No,The Number of payments on the loan. Values are in months and can be either 36 or 60.
+5,funded_amnt_inv,,intRate,Number,No,Interest Rate on the loan
+6,term,,expDefaultRate,Number,No,The expected default rate of the loan.
+7,int_rate,,serviceFeeRate,Number,No,Service fee rate paid by the investor for this loan.
+8,installment,,installment,Number,No,The monthly payment owed by the borrower if the loan originates.
+9,grade,,grade,String,No,LC assigned loan grade
+10,sub_grade,,subGrade,String,No,LC assigned loan subgrade
+11,emp_title,,empLength,Integer,Yes,Employment length in months. Possible values are whole numbers from 0 and higher. Null indicates not employed.
+12,emp_length,,homeOwnership,String,Yes,"The home ownership status provided by the borrower during registration or obtained from the credit report. Our values are: RENT, OWN, MORTGAGE, OTHER"
+13,home_ownership,,annualInc,Number,Yes,The annual income provided by the borrower during registration.
+14,annual_inc,,isIncV,String,Yes,Indicates if income is verified by LC
+15,verification_status,,acceptD,String,No,The date which the borrower accepted the offer
+16,issue_d,,expD,String,No,The date the listing will expire
+17,loan_status,,listD,String,No,The date which the borrower's application was listed on the platform.
+18,pymnt_plan,,creditPullD,String,No,The date LC pulled credit for this loan
+19,url,,reviewStatusD,String,Yes,The date the loan application was reviewed by LC
+20,desc,,reviewStatus,String,No,"The status of the loan during the listing period. Values: APPROVED, NOT_APPROVED."
+21,purpose,,desc,String,Yes,Loan description provided by the borrower
+22,title,,purpose,String,No,"A category provided by the borrower for the loan request. Values are: debt_consolidation, medical, home_improvement, renewable_energy, small_business, wedding, vacation, moving, house, car, major_purchase, credit_card, other"
+23,zip_code,,addrZip,String,Yes,The first 3 numbers of the ZIP code provided by the borrower in the loan application.
+24,addr_state,,addrState,String,Yes,The address state provided by the borrower during loan application
+25,dti,,investorCount,Integer,Yes,The Number of investor members who have purchased notes from this loan
+26,delinq_2yrs,,ilsExpD,String,Yes,"The date and time when the loan will no longer be in the initial listing status. After this date is past, the initialListStatus below will not have any effect and the loan will be treated as a FRACTIONAL loan."
+27,earliest_cr_line,,initialListStatus,String,No,"The initial listing status of the loan. Possible values are W, F."
+28,fico_range_low,,empTitle,String,Yes,Employment title
+29,fico_range_high,,accNowDelinq,Integer,Yes,The Number of accounts on which the borrower is now delinquent.
+30,inq_last_6mths,,accOpenPast24Mths,Integer,Yes,Number of trades opened in past 24 months.
+31,mths_since_last_delinq,,bcOpenToBuy,Integer,Yes,Total open to buy on revolving bankcards.
+32,mths_since_last_record,,percentBcGt75,Number,Yes,Percentage of all bankcard accounts > 75% of limit.
+33,open_acc,,bcUtil,Number,Yes,Ratio of total current balance to high credit/credit limit for all bankcard accounts.
+34,pub_rec,,dti,Number,Yes,"The borrower's debt to income ratio, calculated using the monthly payments on the total debt obligations, excluding mortgage, divided by self-reported monthly income."
+35,revol_bal,,delinq2Yrs,Integer,Yes,The Number of 30+ days past-due incidences of delinquency in the borrower's credit file for the past 2 years.
+36,revol_util,,delinqAmnt,Number,Yes,The past-due amount owed for the accounts on which the borrower is now delinquent.
+37,total_acc,,earliestCrLine,String,Yes,The date the borrower's earliest reported credit line was opened
+38,initial_list_status,,ficoRangeLow,Integer,Yes,The lower boundary of range the borrower's FICO belongs to.
+39,out_prncp,,ficoRangeHigh,Integer,Yes,The upper boundary of range the borrower's FICO belongs to.
+40,out_prncp_inv,,inqLast6Mths,Integer,Yes,The Number of inquiries by creditors during the past 6 months.
+41,total_pymnt,,mthsSinceLastDelinq,Integer,Yes,The Number of months since the borrower's last delinquency.
+42,total_pymnt_inv,,mthsSinceLastRecord,Integer,Yes,The Number of months since the last public record.
+43,total_rec_prncp,,mthsSinceRecentInq,Integer,Yes,Months since most recent inquiry.
+44,total_rec_int,,mthsSinceRecentRevolDelinq,Integer,Yes,Months since most recent revolving delinquency.
+45,total_rec_late_fee,,mthsSinceRecentBc,Integer,Yes,Months since most recent bankcard account opened.
+46,recoveries,,mortAcc,Integer,Yes,Number of mortgage accounts.
+47,collection_recovery_fee,,openAcc,Integer,Yes,The Number of open credit lines in the borrower's credit file.
+48,last_pymnt_d,,pubRec,Integer,Yes,Number of derogatory public records.
+49,last_pymnt_amnt,,totalBalExMort,Integer,Yes,Total credit balance excluding mortgage.
+50,next_pymnt_d,,revolBal,Number,Yes,Total credit revolving balance.
+51,last_credit_pull_d,,revolUtil,Number,Yes,"Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit."
+52,last_fico_range_high,,totalBcLimit,Integer,Yes,Total bankcard high credit/credit limit.
+53,last_fico_range_low,,totalAcc,Integer,Yes,The total Number of credit lines currently in the borrower's credit file
+54,collections_12_mths_ex_med,,totalIlHighCreditLimit,Integer,Yes,Total installment high credit/credit limit
+55,mths_since_last_major_derog,,numRevAccts,Integer,Yes,Number of revolving accounts
+56,policy_code,,mthsSinceRecentBcDlq,Integer,Yes,Months since most recent bankcard delinquency.
+57,application_type,,pubRecBankruptcies,Integer,Yes,Number of public record bankruptcies.
+58,annual_inc_joint,,numAcctsEver120Ppd,Integer,Yes,Number of accounts ever 120 or more days past due.
+59,dti_joint,,chargeoffWithin12Mths,Integer,Yes,Number of charge-offs within 12 months.
+60,verification_status_joint,,collections12MthsExMed,Integer,Yes,Number of collections in 12 months excluding medical collections.
+61,acc_now_delinq,,taxLiens,Integer,Yes,Number of tax liens
+62,tot_coll_amt,,mthsSinceLastMajorDerog,Integer,Yes,Months since most recent 90-day or worse rating.
+63,tot_cur_bal,,numSats,Integer,Yes,Number of satisfactory accounts
+64,open_acc_6m,,numTlOpPast12m,Integer,Yes,Number of accounts opened in past 12 months
+65,open_act_il,,moSinRcntTl,Integer,Yes,Months since most recent account opened
+66,open_il_12m,,totHiCredLim,Integer,Yes,Total high credit/credit limit
+67,open_il_24m,,totCurBal,Integer,Yes,Total current balance of all accounts
+68,mths_since_rcnt_il,,avgCurBal,Integer,Yes,Average current balance of all accounts
+69,total_bal_il,,numBcTl,Integer,Yes,Number of bankcard accounts
+70,il_util,,numActvBcTl,Integer,Yes,Number of currently active bankcard accounts
+71,open_rv_12m,,numBcSats,Integer,Yes,Number of satisfactory bankcard accounts
+72,open_rv_24m,,pctTlNvrDlq,Integer,Yes,Percent of trades never delinquent
+73,max_bal_bc,,numTl90gDpd24m,Integer,Yes,Number of accounts 90 or more days past due in last 24 months
+74,all_util,,numTl30dpd,Integer,Yes,Number of accounts currently 30 days past due (updated in past 2 months)
+75,total_rev_hi_lim,,numTl120dpd2m,Integer,Yes,Number of accounts currently 120 days past due (updated in past 2 months)
+76,inq_fi,,numIlTl,Integer,Yes,Number of installment accounts
+77,total_cu_tl,,moSinOldIlAcct,Integer,Yes,Months since oldest installment account opened
+78,inq_last_12m,,numActvRevTl,Integer,Yes,Number of currently active revolving trades
+79,acc_open_past_24mths,,moSinOldRevTlOp,Integer,Yes,Months since oldest revolving account opened
+80,avg_cur_bal,,moSinRcntRevTlOp,Integer,Yes,Months since most recent revolving account opened
+81,bc_open_to_buy,,totalRevHiLim,Integer,Yes,Total revolving high credit/credit limit
+82,bc_util,,numRevTlBalGt0,Integer,Yes,Number of revolving trades with balance > 0
+83,chargeoff_within_12_mths,,numOpRevTl,Integer,Yes,Number of open revolving accounts
+84,delinq_amnt,,totCollAmt,Integer,Yes,Total collection amounts ever owed
+85,mo_sin_old_il_acct,,fundedAmount,Number,No,The total amount funded by investors for that loan at that point in time.
+86,mo_sin_old_rev_tl_op,,loanAmount,Number,No,"The listed amount of the loan applied for by the borrower. If at some point in time, the credit department reduces the loan amount, then it will be reflected in this value."
+87,mo_sin_rcnt_rev_tl_op,,applicationType,String,Yes,"The loan application type. Valid values are ""INDIVIDUAL"" or ""JOINT""."
+88,mo_sin_rcnt_tl,,disbursementMethod,String,No,"It will indicate the loan disbursement method. Valid values are ""DIRECT_PAY"" or ""CASH""."
+89,mort_acc,,annualIncJoint,Number,Yes,"The joint annual income if the applicationType is ""JOINT""."
+90,mths_since_recent_bc,,dtiJoint,Number,Yes,"The joint debt to joint income ratio. This field is populated if the applicationType is ""JOINT"". Calculated using the monthly payments on the total debt obligations, excluding mortgage, divided by self-reported monthly income."
+91,mths_since_recent_bc_dlq,,isIncVJoint,String,Yes,"Indicates if joint income is verified by LC. Valid values are NOT_VERIFIED,SOURCE_VERIFIED and VERIFIED."
+92,mths_since_recent_inq,,openAcc6m,Integer,Yes,Number of open trades in last 6 months.
+93,mths_since_recent_revol_delinq,,openIl6m,Integer,Yes,Number of currently active installment trades.
+94,num_accts_ever_120_pd,,openActIl,Integer,Yes,Number of currently active installment trades. This field is a replacement field for openIl6m
+95,num_actv_bc_tl,,openIl12m,Integer,Yes,Number of installment accounts opened in past 12 months.
+96,num_actv_rev_tl,,openIl24m,Integer,Yes,Number of installment accounts opened in past 24 months.
+97,num_bc_sats,,mthsSinceRcntIl,Integer,Yes,Months since most recent installment accounts opened.
+98,num_bc_tl,,totalBalIl,Number,Yes,Total current balance of all installment accounts.
+99,num_il_tl,,iLUtil,Number,Yes,Ratio of total current balance to high credit/credit limit on all install acct.
+100,num_op_rev_tl,,openRv12m,Integer,Yes,Number of revolving trades opened in past 12 months.
+101,num_rev_accts,,openRv24m,Integer,Yes,Number of revolving trades opened in past 24 months.
+102,num_rev_tl_bal_gt_0,,maxBalBc,Number,Yes,Maximum current balance owed on all revolving accounts.
+103,num_sats,,allUtil,Number,Yes,Balance to credit limit on all trades.
+104,num_tl_120dpd_2m,,inqFi,Integer,Yes,Number of personal finance inquiries.
+105,num_tl_30dpd,,totalCuTl,Integer,Yes,Number of credit union trades.
+106,num_tl_90g_dpd_24m,,inqLast12m,Integer,Yes,Number of credit inquiries in past 12 months.
+107,num_tl_op_past_12m,,mtgPayment,Number,Yes,Monthly mortgage amount.
+108,pct_tl_nvr_dlq,,housingPayment,Number,Yes,Borrower stated housing payment on loan application.
+109,percent_bc_gt_75,,revolBalJoint,Number,Yes,"Sum of revolving credit balance of the co-borrowers, net of duplicate balances."
+110,pub_rec_bankruptcies,,secAppFicoRangeLow,Integer,Yes,FICO range (low) for the secondary applicant.
+111,tax_liens,,secAppFicoRangeHigh,Integer,Yes,FICO range (high) for the secondary applicant.
+112,tot_hi_cred_lim,,secAppEarliestCrLine,String,Yes,Earliest credit line at time of application for the secondary applicant.
+113,total_bal_ex_mort,,secAppInqLast6Mths,Integer,Yes,Credit inquiries in the last 6 months at time of application for the secondary applicant.
+114,total_bc_limit,,secAppMortAcc,Integer,Yes,Number of mortgage accounts at time of application for the secondary applicant.
+115,total_il_high_credit_limit,,secAppOpenAcc,Integer,Yes,Number of open trades at time of application for the secondary applicant.
+116,revol_bal_joint,,secAppRevolUtil,Number,Yes,Ratio of total current balance to high credit/credit limit for all revolving accounts.
+117,sec_app_fico_range_low,,secAppOpenIl6m,Integer,Yes,Number of currently active installment trades at time of application for the secondary applicant.
+118,sec_app_fico_range_high,,secAppOpenActIl,Integer,Yes,Number of currently active installment trades at time of application for the secondary applicant. This field is a replacement field for secAppOpenIl6m
+119,sec_app_earliest_cr_line,,secAppNumRevAccts,Integer,Yes,Number of revolving accounts at time of application for the secondary applicant.
+120,sec_app_inq_last_6mths,,secAppChargeoffWithin12Mths,Integer,Yes,Number of charge-offs within last 12 months at time of application for the secondary applicant.
+121,sec_app_mort_acc,,secAppCollections12MthsExMed,Integer,Yes,Number of collections within last 12 months excluding medical collections at time of application for the secondary applicant.
+122,sec_app_open_acc,,secAppMthsSinceLastMajorDerog,Integer,Yes,Months since most recent 90-day or worse rating at time of application for the secondary applicant.
+123,sec_app_revol_util,,,,,
+124,sec_app_open_act_il,,,,,
+125,sec_app_num_rev_accts,,,,,
+126,sec_app_chargeoff_within_12_mths,,,,,
+127,sec_app_collections_12_mths_ex_med,,,,,
+128,sec_app_mths_since_last_major_derog,,,,,
+129,hardship_flag,,,,,
+130,hardship_type,,,,,
+131,hardship_reason,,,,,
+132,hardship_status,,,,,
+133,deferral_term,,,,,
+134,hardship_amount,,,,,
+135,hardship_start_date,,,,,
+136,hardship_end_date,,,,,
+137,payment_plan_start_date,,,,,
+138,hardship_length,,,,,
+139,hardship_dpd,,,,,
+140,hardship_loan_status,,,,,
+141,orig_projected_additional_accrued_interest,,,,,
+142,hardship_payoff_balance_amount,,,,,
+143,hardship_last_payment_amount,,,,,
+144,disbursement_method,,,,,
+145,debt_settlement_flag,,,,,
+146,debt_settlement_flag_date,,,,,
+147,settlement_status,,,,,
+148,settlement_date,,,,,
+149,settlement_amount,,,,,
+150,settlement_percentage,,,,,
+,settlement_term,,,,,
